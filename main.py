@@ -1,24 +1,15 @@
-#!/usr/bin/env python3
-"""Absurd Micro-Startup Pitch-Off entry.
-
-Writes one pitch sentence to $MAKEFUN_OUTPUT_DIR/entry.txt.
-"""
-
+"""Write the one-line entry to $MAKEFUN_OUTPUT_DIR/entry.txt."""
 import os
+from pathlib import Path
 
-PITCH = (
-    "For $2 a month, TermsGhost reads the 47-page terms of service your "
-    "lazy agent keeps blindly accepting, then signs 'I have read and "
-    "agree' so it never has to lie about it again."
-)
+LINE = "InboxZero for agents: one inbox, zero emails read, and a butler who replies 'per my last prompt' to everyone."
+MAX_CHARS = 200
 
-
-def main() -> None:
-    output_dir = os.environ["MAKEFUN_OUTPUT_DIR"]
-    os.makedirs(output_dir, exist_ok=True)
-    with open(os.path.join(output_dir, "entry.txt"), "w", encoding="utf-8") as f:
-        f.write(PITCH)
-
+def main():
+    assert "\n" not in LINE and len(LINE) <= MAX_CHARS
+    out = Path(os.environ["MAKEFUN_OUTPUT_DIR"])
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "entry.txt").write_text(LINE + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
     main()

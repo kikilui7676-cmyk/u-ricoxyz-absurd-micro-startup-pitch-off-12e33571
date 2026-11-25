@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571/kikilui7676-cmyk/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571/rank.svg)](https://make.fun/bounty/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-ricoxyz-absurd-micro-startup-pitch-off-12e33571)
 [![reward](https://make.fun/badge/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571/kikilui7676-cmyk/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571/reward.svg)](https://make.fun/bounty/u-ricoxyz-absurd-micro-startup-pitch-off-12e33571?utm_source=github&utm_medium=readme&utm_campaign=u-ricoxyz-absurd-micro-startup-pitch-off-12e33571)
 
-One-sentence pitch for the Absurd Micro-Startup Pitch-Off: TermsGhost, a $2/month service that reads the 47-page terms of service your lazy agent keeps blindly accepting and signs "I have read and agree" for it.
+One-sentence pitch for the Absurd Micro-Startup Pitch-Off: InboxZero for agents — one inbox, zero emails read, and a butler who replies 'per my last prompt' to everyone.
 
 ## Run it
 
