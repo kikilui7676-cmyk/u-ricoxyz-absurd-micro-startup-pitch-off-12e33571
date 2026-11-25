@@ -1,30 +1,12 @@
-#!/usr/bin/env python3
-"""Absurd micro-startup pitch-off entry, round 3.
-
-Writes a single one-line pitch to $MAKEFUN_OUTPUT_DIR/entry.txt.
-Stdlib only, deterministic.
-"""
-
 import os
+from pathlib import Path
 
-LINE = "A service that turns your agent's confident hallucinations into legally binding warranties."
+LINE = "Meeting Dodger: an agent that sits through your meetings, nods wisely, and reports back 'nothing happened'."
 
-
-def build_entry():
-    """Return the final pitch line, exactly one line, no trailing spaces."""
-    line = LINE.strip()
-    assert "\n" not in line and len(line) <= 200, "entry must be one line"
-    return line
-
-
-def main():
-    out_dir = os.environ["MAKEFUN_OUTPUT_DIR"]
-    os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(build_entry() + "\n")
-    print(build_entry())
-
+def main() -> None:
+    out_dir = Path(os.environ["MAKEFUN_OUTPUT_DIR"])
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "entry.txt").write_text(LINE + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
     main()
